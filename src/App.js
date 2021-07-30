@@ -1,30 +1,30 @@
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import ScrollUpButton from './components/ScrollUpButton'
-import Home from './components/Home'
-import Navigationbar from './components/Navigationbar'
-import Footer from './components/Footer'
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ScrollUpButton from "./components/ScrollUpButton";
+import Home from "./components/Home";
+import Navigationbar from "./components/Navigationbar";
+import Footer from "./components/Footer";
+import Biography from "./components/Biography";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <Router>     
+    <Router>
       <div className="App bg-dark">
         <Navigationbar />
         <ScrollUpButton />
         <div className="content">
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/projects">
-            {/* TODO: <Projects /> */}
-          </Route>
-          <Route exact path="/about-me">
-            {/* TODO: <About /> */}
-          </Route>
-        </Switch>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/projects">
+              {/* TODO: <Projects /> */}
+            </Route>
+            <Route path="/biography">
+              <Biography />
+            </Route>
+          </Switch>
         </div>
         <Footer />
       </div>

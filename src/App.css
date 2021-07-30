@@ -10,6 +10,11 @@
 .dropdown-menu > a {
   color: rgb(241, 241, 241) !important;
 }
+.dropdown-menu > a:hover {
+  color: #6c757d !important;
+  background-color: inherit !important;
+}
+
 
 /* ACC: Art Content Class */
 /* START */
@@ -48,4 +53,8 @@
   border: 1px solid #6c757d;
   padding: 0.75rem 1rem;
   z-index: 1000;
+}
+
+nav a {
+  text-decoration: none !important;
 }

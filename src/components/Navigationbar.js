@@ -25,23 +25,35 @@ function Navigationbar() {
             <NavDropdown
               bg="dark"
               variant="dark"
-              title="Projects"
-              id="collasible-nav-dropdown"
+              title="PROJECTS"
+              id="projects-dropdown"
             >
               <NavDropdown.Item as={Link} to="#Music">
-                Music
+                MUSIC
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="#Installations">
-                Installations
+                INSTALLATION
               </NavDropdown.Item>
-              <NavDropdown.Divider />
+              <NavDropdown.Divider style={{borderColor:"#d2d2d2"}}/>
               <NavDropdown.Item as={Link} to="#Kamancheh">
-                Kamancheh
+                KAMANCHEH
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/about-me">
-              About Me
-            </Nav.Link>
+            <NavDropdown
+              as={Link}
+              to="/about-me"
+              bg="dark"
+              variant="dark"
+              title="ABOUT ME"
+              id="about-dropdown"
+            >
+              <NavDropdown.Item as={Link} to="/biography">
+                BIOGRAPHY
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="#contact">
+                CONTACT
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
