@@ -23,28 +23,30 @@ function Navigationbar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <NavDropdown
+              as={Link}
+              to="/music"
               bg="dark"
               variant="dark"
               title="PROJECTS"
               id="projects-dropdown"
             >
-              <NavDropdown.Item as={Link} to="/Music">
+              <NavDropdown.Item as={Link} to="/music">
                 MUSIC
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Installations">
+              <NavDropdown.Item as={Link} to="/installations">
                 INSTALLATION
               </NavDropdown.Item>
-              <NavDropdown.Divider style={{borderColor:"#d2d2d2"}}/>
-              <NavDropdown.Item as={Link} to="/Kamancheh">
+              <NavDropdown.Divider style={{ borderColor: "#d2d2d2" }} />
+              <NavDropdown.Item as={Link} to="/kamancheh">
                 KAMANCHEH
               </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown
               as={Link}
-              to="/about-me"
+              to="/about"
               bg="dark"
               variant="dark"
-              title="ABOUT ME"
+              title="ABOUT"
               id="about-dropdown"
             >
               <NavDropdown.Item as={Link} to="/about">

@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ScrollUpButton from "./components/ScrollUpButton";
-import Home from "./components/Home";
+import Music from "./components/Music";
 import Navigationbar from "./components/Navigationbar";
 import Footer from "./components/Footer";
 import AboutMe from "./components/AboutMe";
+import TwoColPage from "./components/TwoColPage";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -15,11 +16,14 @@ function App() {
         <ScrollUpButton />
         <div className="content">
           <Switch>
-            <Route exact path="/">
-              <Home />
+            <Route exact path={["/", "/music", "/home", "/index"]}>
+              <Music />
             </Route>
             <Route exact path="/projects">
               {/* TODO: <Projects /> */}
+            </Route>
+            <Route exact path="/twocol">
+              <TwoColPage title="test Two Col Page" />
             </Route>
             <Route path="/about">
               <AboutMe />
