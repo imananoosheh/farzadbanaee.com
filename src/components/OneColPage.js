@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 function OneColPage({ title, data }) {
   const itemStyle = { color: "#d2d2d2" };
-  const [descAnime, setDescAnime] = useState(false);
+  const [descAnime, ] = useState(false);
   return (
     <Container className="my-5">
       <Container className="my-5 text-uppercase" style={{ color: "#d2d2d2" }}>
@@ -11,9 +11,6 @@ function OneColPage({ title, data }) {
       </Container>
       <Container className="row">
         {data.map((item, idx) => {
-          // return(img.type === "img" &&
-          //     <img src={img.url} alt={img.url.slice(-20)}></img>
-          // )
 
           return item.type === "img" ? (
             <Container
