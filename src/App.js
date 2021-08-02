@@ -4,7 +4,7 @@ import Music from "./components/Music";
 import Navigationbar from "./components/Navigationbar";
 import Footer from "./components/Footer";
 import AboutMe from "./components/AboutMe";
-import TwoColPage from "./components/TwoColPage";
+import Biography from "./components/Biography";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -22,8 +22,8 @@ function App() {
             <Route exact path="/projects">
               {/* TODO: <Projects /> */}
             </Route>
-            <Route exact path="/twocol">
-              <TwoColPage title="test Two Col Page" />
+            <Route exact path="/biography">
+              <Biography />
             </Route>
             <Route path="/about">
               <AboutMe />
