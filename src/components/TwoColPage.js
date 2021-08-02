@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 
 function TwoColPage({ title, data }) {
-
   const itemStyle = { color: "#d2d2d2", paddingTop: "1rem" };
   return (
     <Container className="my-5">

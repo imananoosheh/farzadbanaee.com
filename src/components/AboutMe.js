@@ -27,10 +27,8 @@ function AboutMe() {
       desc: "This is the Decription of this Artwork",
     },
   ];
-  const title = "ABOUT ME"
-  return(
-    <TwoColPage title={title} data={data} />
-  )
+  const title = "ABOUT ME";
+  return <TwoColPage title={title} data={data} />;
 }
 
 export default AboutMe;
