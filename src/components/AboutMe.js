@@ -1,35 +1,26 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-function Biography() {
+function AboutMe() {
   const items = ["", "", "", "", "", ""];
+  const parentStyle = {};
+  const itemStyle = {color: '#d2d2d2', paddingTop: '1rem'};
   return (
     <Container className="my-5">
       <Container className="my-5 text-uppercase" style={{ color: "#d2d2d2" }}>
-        <h2>Biography</h2>
+        <h2>About Me</h2>
       </Container>
       <div className="row">
         {items.map((val, idx) => {
           return (
             <Container
               key={idx}
-              className="col-sm-6 mt-3 acc position-relative text-center"
+              className="col-sm-6 mt-3 acc"
+              style={parentStyle}
             >
-              {idx % 2 ? (
-                <Container
-                  style={{
-                    minHeight: "450px",
-                    position: "relative",
-                    display: "table",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "table-cell",
-                      verticalAlign: "middle",
-                      color: "#d2d2d2",
-                    }}
-                  >
+              <div style={itemStyle}>
+                {idx % 2 ? (
+                  <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Integer ultrices dignissim lacus eu vestibulum. Aliquam
                     ornare leo vitae nunc gravida, et lacinia velit convallis.
@@ -40,18 +31,15 @@ function Biography() {
                     suscipit finibus metus id placerat. In ultricies mattis
                     sapien eget mollis. Maecenas tincidunt est velit, vel
                     placerat libero fermentum in.
-                  </div>
-                </Container>
-              ) : (
-                <img
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                  }}
-                  alt={val}
-                  src={`https://www.designformusic.com/wp-content/uploads/2016/09/electro-synthwave-album-cover-500x500.jpg`}
-                ></img>
-              )}
+                  </p>
+                ) : (
+                  <img
+                    width="85%"
+                    alt={val}
+                    src={`https://www.designformusic.com/wp-content/uploads/2016/09/electro-synthwave-album-cover-500x500.jpg`}
+                  ></img>
+                )}
+              </div>
             </Container>
           );
         })}
@@ -78,4 +66,4 @@ function Biography() {
   );
 }
 
-export default Biography;
+export default AboutMe;

@@ -28,14 +28,14 @@ function Navigationbar() {
               title="PROJECTS"
               id="projects-dropdown"
             >
-              <NavDropdown.Item as={Link} to="#Music">
+              <NavDropdown.Item as={Link} to="/Music">
                 MUSIC
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#Installations">
+              <NavDropdown.Item as={Link} to="/Installations">
                 INSTALLATION
               </NavDropdown.Item>
               <NavDropdown.Divider style={{borderColor:"#d2d2d2"}}/>
-              <NavDropdown.Item as={Link} to="#Kamancheh">
+              <NavDropdown.Item as={Link} to="/Kamancheh">
                 KAMANCHEH
               </NavDropdown.Item>
             </NavDropdown>
@@ -47,10 +47,13 @@ function Navigationbar() {
               title="ABOUT ME"
               id="about-dropdown"
             >
+              <NavDropdown.Item as={Link} to="/about">
+                ABOUT ME
+              </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/biography">
                 BIOGRAPHY
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#contact">
+              <NavDropdown.Item as={Link} to="/contact">
                 CONTACT
               </NavDropdown.Item>
             </NavDropdown>
