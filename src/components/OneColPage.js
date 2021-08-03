@@ -15,14 +15,14 @@ function OneColPage({ title, data }) {
           return item.type === "img" ? (
             <Container
               key={idx}
-              className="col-sm-6 col-lg-4 mt-3 acc position-relative text-center"
+              className="col-12 mt-3 acc position-relative text-center"
             >
               <div className={descAnime && `acc-hover`}>
                 <Container className="acc-description">{item.desc}</Container>
                 <img
                   style={{
-                    width: "100%",
-                    height: "auto",
+                    width: "auto",
+                    height: "40vh",
                   }}
                   alt={item.url.slice(-20)}
                   src={item.url}
@@ -30,7 +30,7 @@ function OneColPage({ title, data }) {
               </div>
             </Container>
           ) : (
-            <Container className="col-sm-6 col-lg-4 p-4 my-2">
+            <Container className="col-12 p-4 my-2">
               <div style={itemStyle}>
                 {item.type === "text" ? (
                   <p style={{ textAlign: "left" }}>{item.text}</p>
