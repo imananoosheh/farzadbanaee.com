@@ -1,14 +1,19 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-function ThreeColPage({ data }) {
+function ThreeColPage({ data, title }) {
   return (
     <div className="border-theme">
+      {title && (
+        <Container className="my-5 text-uppercase" style={{ color: "#d2d2d2" }}>
+          <h2>{title}</h2>
+        </Container>
+      )}
       <div className="bg-dark">
         <Container style={{ padding: "5vw" }}>
           <div className="row">
             {data.map((item, idx) => {
-                console.log(item)
+              console.log(item);
               return (
                 item.type === "img" && (
                   <Container
