@@ -13,7 +13,6 @@ function ThreeColPage({ data, title }) {
         <Container style={{ padding: "5vw" }}>
           <div className="row">
             {data.map((item, idx) => {
-              console.log(item);
               return (
                 item.type === "img" && (
                   <Container
