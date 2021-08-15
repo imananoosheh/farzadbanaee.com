@@ -64,17 +64,28 @@ function Music() {
   //   },
   // ];
 
-  const [data, setData] = useState([]);
-  
-  console.log("data fetched..", data);
-  useEffect(() => {
-    fetch("/api/music")
-    .then(res => res.json)
-    .then((data) => setData(data));
+  const [data, setData] = useState(() => {
+    fetch("http://127.0.0.1:3001/api/music")
+      .then((res) => res.json)
   });
+
+  // const fetch = () => {
+  //   fetch("/api/music")
+  //     .then((res) => res.json)
+  //     .then((data) => setData(data));
+  // };
+
+  // useEffect(() => {
+  //   fetch()
+  //   console.log("data fetched..", data);
+  // });
   // componentDidMount(){
-  //   fetch('/api/music').then(res => res.json)
+  //   fetch("/api/music")
+  //   .then((res) => res.json)
+  //   .then((data) => setData(data));
   // }
+  console.log("data fetched..", data);
+
   return <ThreeColPage data={data} />;
 }
 
