@@ -1,7 +1,10 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import { Container } from "react-bootstrap";
+import AdminFace from "./AdminFace";
 
-function ThreeColPage({ data, title }) {
+function ThreeColPage({ data, title, isAdmin }) {
+
+  console.log("isAdmin value passed to ThreeColPage:", isAdmin);
   return (
     <div className="border-theme">
       {title && (
@@ -19,6 +22,7 @@ function ThreeColPage({ data, title }) {
                     key={idx}
                     className="col-sm-6 col-lg-4 mt-3 acc position-relative text-center"
                   >
+                    {isAdmin && <AdminFace idx={idx} />}
                     <div className="acc-hover">
                       <Container className="acc-description">
                         {item.desc}
@@ -26,7 +30,7 @@ function ThreeColPage({ data, title }) {
                       <img
                         style={{
                           width: "100%",
-                          height: "auto",
+                          height: "100%",
                         }}
                         alt={item}
                         src={item.url}

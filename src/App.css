@@ -15,19 +15,19 @@
   background-color: inherit !important;
 }
 
-
 /* ACC: Art Content Class */
 /* START */
 .acc {
   height: 100%;
 }
-.acc-hover:hover > img, .acc-hover:active > img {
-  width: 95% !important;
+.acc-hover:hover > img,
+.acc-hover:active > img {
   -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
   filter: blur(2px);
 }
 
-.acc-hover:hover > .acc-description, .acc-hover:active > .acc-description {
+.acc-hover:hover > .acc-description,
+.acc-hover:active > .acc-description {
   display: block !important;
   position: absolute;
   top: 50%;
